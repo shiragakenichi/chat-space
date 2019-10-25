@@ -9,10 +9,10 @@
           USERNAME
         %ul.left-top__box__menu
           %li.left-top__box__menu__new-group
-            %a{:href => "/groups/new"}
+            %a{href: "/groups/new"}
               %i.fa.fa-edit
           %li.left-top__box__menu__edit-user
-            %a{:href => "/users/1392/edit"}
+            %a{href: "/users/1392/edit"}
               %i.fa.fa-cog 
     .left-bottoms
       = render "message"
@@ -36,7 +36,7 @@
           MEMBERNAME
           %li.member-list__member
             白髪
-      %a{:href => "/groups/3067/edit"}
+      %a{href: "/groups/3067/edit"}
         .right-top__edit-btn
           Edit
     .right-center
@@ -53,12 +53,12 @@
       = render "group-message"
       = render "group-message"
     .right-form
-      %form.new-message{"accept-charset" => "UTF-8", :action => "/groups/3067/messages", :enctype => "multipart/form-data", :method => "post"}
-        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        %input{:name => "authenticity_token", :type => "hidden", :value => "3JTelZ/5j7GR/33ouKsYU5UCNwpRPquQPnQtsb+6VZS6Wx/xqenUsAaXqi8vrmvv/FTyeGptqntRoYwe5XeWrQ=="}/
+      %form.new-message{"accept-charset":  "UTF-8", action: "/groups/3067/messages", enctype: "multipart/form-data", method: "post"}
+        %input{name:  "utf8", type: "hidden", value: "✓"}/
+        %input{name: "authenticity_token", type: "hidden", value: "3JTelZ/5j7GR/33ouKsYU5UCNwpRPquQPnQtsb+6VZS6Wx/xqenUsAaXqi8vrmvv/FTyeGptqntRoYwe5XeWrQ=="}/
         .input-box
-          %input.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.input-box__image{:for => "message_image"} 
+          %input.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+          %label.input-box__image{for: "message_image"} 
             %i.fa.fa-image 
-              %input.message_image.input-box__image__file{:name => "message[image]", :type => "file", :id => "message_image" }/ 
-        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+              %input.message_image.input-box__image__file{name:  "message[image]", type: "file", id:  "message_image" }/ 
+        %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value:  "Send"}/
