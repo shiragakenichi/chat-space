@@ -1,6 +1,11 @@
-%a{:href => "/groups/3307/messages"}
-  .group
-    %p.group__group-name 
-      GROOPNAME
-    %p.group__latest-message
-      MESSAGE
+.message
+  .message__upper-info
+    .messge__upper-info__talker
+      = message.user.name
+    .message__upper-info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .message__text
+    - if message.content.present?
+      %p.message__text__content
+        = message.content
+    = image_tag message.image.url, class: 'message__text__image' if message.image.present?
