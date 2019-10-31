@@ -35,7 +35,6 @@ $(function(){
         contentType: false,
       })
       .done(function(message){
-        console.log(message)
         var html = buildPost(message);
         
         $('.right-center').append(html)
