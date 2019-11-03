@@ -51,7 +51,7 @@ $(function(){
          if (window.location.href.match(/\/groups\/\d+\/messages/)){//今いるページのリンクが/groups/グループID/messagesのパスとマッチすれば以下を実行。
            var last_message_id = $('.message:last').data("message-id"); //dataメソッドで.messageにある:last最後のカスタムデータ属性を取得しlast_message_idに代入。
           
-          console.log(last_message_id)
+
            $.ajax({ //ajax通信で以下のことを行う
              url: "api/messages", //サーバを指定。今回はapi/message_controllerに処理を飛ばす
              type: 'get', //メソッドを指定
