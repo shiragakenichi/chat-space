@@ -2,41 +2,22 @@
   .header__h1
     グループを作成しました。
 .contents
-  .left
-    .left-top
-      .left-top__box
-        %p.left-top__box__user-name
-          USERNAME
-        %ul.left-top__box__menu
-          %li.left-top__box__menu__new-group
-            %a{href: "/groups/new"}
-              %i.fa.fa-edit
-          %li.left-top__box__menu__edit-user
-            %a{href: "/users/1392/edit"}
-              %i.fa.fa-cog 
-    .left-bottoms
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
-      -# = render "message"
+  = render 'shared/side_bar'
   .right-contents
     .right-top
       .right-top__box
         %h2.box-group
-          GROOP_NAME
+          = @group.name
         %ul.member-list
-          MEMBERNAME
-          %li.member-list__member
-            白髪
-      %a{href: "/groups/3067/edit"}
+          MEMBER-LIST:
+          //#chat-group-users.js-add-user
+          %li.member-list__member= current_user.name
+
+          - @group.users.each do |user|
+            - if current_user.name != user.name
+              %li.member-list__member
+                = user.name 
+      = link_to edit_group_path(@group.id) do
         .right-top__edit-btn
           Edit
     .right-center
