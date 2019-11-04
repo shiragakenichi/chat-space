@@ -106,6 +106,7 @@ color: #ffffff;
           margin-bottom: 12px;
           &__member{
             display: list-item;
+            margin-left: 10px;
           }
         }
       }
@@ -122,7 +123,7 @@ color: #ffffff;
         } 
     }
   
-    $vao: 290px;
+    $vao: 320px;
     .right-center{
       padding: 46px 40px;
       background-color: #fafafa;
@@ -152,14 +153,15 @@ color: #ffffff;
         }
       }
     }
-    
+  
     .right-form{
       height: 90px;
       padding: 20px 40px;
       background-color: #dddddd;
-       .new-message{
+       .new_message{
         display: flex;
-        .input-box{
+        position: relative;
+        .form__message{
           position: relative;
           width: 100%;
           .input-box__text{
@@ -168,24 +170,26 @@ color: #ffffff;
             color: #434a54;
             border-style: nane;
           }
-          .input-box__image{
+        }
+          .form__mask{
             font-size: 1.3rem;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 7px;
+            right: 110px;
             cursor: pointer;
+            background-color: white;
          
-            .fa.fa-image{
+            .form__mask__image{
               display: inline-block;
               font-size: inherit;
               text-rendering: auto;
-              .message_image.input-box__image__file{
+              .hidden{
                display: none;
               }
             }
-          }
+          
         }
-       .submit-btn{
+       .form__submit{
          width: 100px;
          height: 50px;
          padding: 0.30px;
@@ -196,5 +200,5 @@ color: #ffffff;
        }
       }
     }   
-  }
+ }
 }
