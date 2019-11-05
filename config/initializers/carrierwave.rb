@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'shiraga'
-  config.asset_host = 'https://s3-ap-northeast-.amazonaws.com/shiraga
+  config.asset_host = 'https://s3-ap-northeast-.amazonaws.com/shiraga'
 end
