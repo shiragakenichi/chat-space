@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function() { 
     function buildPost(message){
      
       var addImage = message.image.url  ?  message.image.url : ''

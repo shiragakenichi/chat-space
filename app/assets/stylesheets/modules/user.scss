@@ -81,6 +81,7 @@
     border: none;
     border-radius: 2px;
   }
+   
 
   input[type='submit'] {
     float: left;
@@ -113,6 +114,20 @@
       }
     }
   }
+  & a{
+    margin-top: 20px;
+    color: #fff;
+    background-color:#ccc;
+    font-size:14px;
+    height: 50px;
+    padding: 0 30px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    display: block;
+    width: 100px;
+   }
+
 }
 
 #error_explanation {
@@ -139,3 +154,27 @@
     font-size: 13px;
   }
 }
+
+// .new_user{
+//   width: 980px;
+//   margin: 60px auto;
+//   padding: 60px;
+//   border: 1px solid #ddd;
+//   border-radius: 5px;
+//   & label{
+//     margin-bottom: 10px;
+//     letter-spacing: 3px;
+//     font-size: 40px;
+//     font-weight: 200;
+//   }
+//   & input{
+//     width: 80%;
+//     padding: 10px;
+//     letter-spacing: 1px;
+//   }
+// }
+
+
+
+
+  
