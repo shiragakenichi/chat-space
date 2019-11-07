@@ -80,4 +80,3 @@ group :development, :test do
 end
 gem 'fog-aws'
 
-gem 'mini_magick'
