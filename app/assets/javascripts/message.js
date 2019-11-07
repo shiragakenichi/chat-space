@@ -40,7 +40,7 @@ $(document).on('turbolinks:load', function() {
           $('.right-center').append(html)
           $('.new_message')[0].reset();
           $('.form__submit').prop('disabled', false);
-          
+          $('.right-center').animate({scrollTop: $('.right-center')[0].scrollHeight}, 'fast');
           })
         .fail(function(){
           alert('メッセージ送信に失敗しました');
@@ -59,7 +59,12 @@ $(document).on('turbolinks:load', function() {
              data: {last_id: last_message_id}
              //飛ばすデータは先ほど取得したlast_message_id。またparamsとして渡すためlast_idとする。
            })
-           .done(function (messages) { //通信成功したら、controllerから受け取ったデータ（messages)を引数にとって以下のことを行う
+           .done(function (messages) {
+             
+            //通信成功したら、controllerから受け取ったデータ（messages)を引数にとって以下のことを行う
+            if (messages.length === 0){
+              return;
+            };
              var insertHTML = '';//追加するHTMLの入れ物を作る
              messages.forEach(function (message) {//配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
                insertHTML = buildPost(message); //メッセージが入ったHTMLを取得
